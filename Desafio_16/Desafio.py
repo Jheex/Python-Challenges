@@ -20,6 +20,16 @@
 #    - SENÃO:
 #        - Imprima: "Produto não temos no cardápio."
 
+# 4. FORA DO LOOP (O fechamento da conta):
+#    - Crie uma variável 'total_geral = 0'
+#    - Use um 'for item, qtd in carrinho.items():'
+#        - Pegue o preço unitário lá no dicionário 'cardapio'
+#        - Calcule o subtotal (quantidade * preço)
+#        - Some o subtotal ao 'total_geral'
+#        - Imprima: f"{item} - Qtd: {qtd} - Subtotal: R${subtotal}"
+
+# 5. Imprima o VALOR TOTAL DA COMPRA
+
 cardapio = {"coxinha":5.0, "suco":4.0, "pao":1.5}
 carrinho = {}
 total_geral = 0
@@ -56,15 +66,3 @@ print("")
 print("Carrinho", carrinho)
 print("Valor total: ", total_geral)
 print("")
-    
-
-
-# 4. FORA DO LOOP (O fechamento da conta):
-#    - Crie uma variável 'total_geral = 0'
-#    - Use um 'for item, qtd in carrinho.items():'
-#        - Pegue o preço unitário lá no dicionário 'cardapio'
-#        - Calcule o subtotal (quantidade * preço)
-#        - Some o subtotal ao 'total_geral'
-#        - Imprima: f"{item} - Qtd: {qtd} - Subtotal: R${subtotal}"
-
-# 5. Imprima o VALOR TOTAL DA COMPRA
