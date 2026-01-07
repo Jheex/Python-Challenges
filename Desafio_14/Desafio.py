@@ -33,7 +33,7 @@ convidados.append("Duda") #adicionando!
 convidados[1] = "Roberto" #editando
 print(f"Após editar o nome do Beto: {convidados}")
 
-convidados.remove("Caio")
+convidados.remove("Caio")#removendo
 print(f"Após o caio sair: {convidados}")
 
 print(f"Lista final do churrasco: {convidados}")
