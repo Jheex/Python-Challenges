@@ -1,56 +1,39 @@
-tickets = []
-qtd = 0
 
-while True:
-    print("Sistema de Tickets")
-    print("")
-    print("1 - Abrir ticket")
-    print("2 - Ver ticket")
-    print("3 - Sair")
+score = 0
 
-    opcao = (int(input("Escolha uma opção: ")))
+tamanho_tv = float(input("Qual o tamanho da TV: "))
+watts = float(input("Qual o consumo de energia em watts: "))
+valor = float(input("Qual o valor em R$: "))
+hdmi = int(input("Qual o número de portas HDMI: "))
 
-    if opcao == 1:
-        print("")
-        print("-----Abrindo Ticket-----")
-        usuario = (str(input("Qual o nome do usuário? ")))
+if tamanho_tv > 80:
+    score = score + 4
+elif tamanho_tv > 60 and tamanho_tv < 81:
+    score = score + 3
+else:
+    score = score - 1
 
-        if usuario == "":
-            print("Resposta inválida!")
-        else:
-            print("")
+if watts < 200:
+    score = score + 1 
 
-        problema = (input("Qual o problema? "))
-        if problema == "":
-            print("Resposta inválida!")
-        else:
-            print("")
+if valor < 1000:
+    score = score + 3
 
-        status = "aberto"
+elif valor >= 1000 and valor < 2001:
+    score = score + 2
 
-        print("Ticket criado com sucesso!")
-        qtd = qtd + 1
+elif valor >= 2000 and valor < 5001:
+    score = score + 1
 
-        tickets.append([
-            {"usuario": usuario, 
-             "problema": problema, 
-             "status": status}
-        ])
 
-        print(f"{usuario} - {problema} - {status}")
+if hdmi > 6:
+    score = score + 3
+elif hdmi >= 4 and hdmi < 7:
+    score = score + 2
 
-    elif opcao == 2:
-        print("")
-        print("-----Visualizando Ticket-----")
-
-        for i in range (1, qtd):
-            print(f"Ticket {i} - {tickets}")
-            print("")
-
-    elif opcao == 3:
-        print("")
-        print("-----Saindo-----")
-        break
-    else:
-        print("")
-        print("Resposta inválida")
+if score < 0:
+    print("Score: 0")
+elif score > 10:
+    print("Score: 10")
+else:
+    print(score)
