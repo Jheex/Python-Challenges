@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nome": "pc",
+        "preco": "5000.0",
+        "estoque": "1"
+    },
+    {
+        "id": 1,
+        "nome": "teste",
+        "preco": 9000.0,
+        "estoque": 1
+    }
+]
