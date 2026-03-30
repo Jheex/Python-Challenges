@@ -9,6 +9,6 @@ class Pessoa:
         print(f"Olá, meu nome é {self.nome} e eu tenho {self.idade} anos.")
 
 p1 = Pessoa("Jhonatan", 20)
-p2 = Pessoa("Jasmine", 29)
+p2 = Pessoa("João", 29)
 p1.apresentar()
 p2.apresentar()
